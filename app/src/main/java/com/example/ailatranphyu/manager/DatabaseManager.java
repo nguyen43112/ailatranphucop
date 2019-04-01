@@ -1,28 +1,32 @@
 package com.example.ailatranphyu.manager;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.res.AssetManager;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Environment;
+import android.preference.PreferenceManager;
 
+import com.example.ailatranphyu.App;
 import com.example.ailatranphyu.model.HighScore;
 import com.example.ailatranphyu.model.Question;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 
 public class DatabaseManager {
     private String DATABASE_NAME = "Question";
-    private String DATABASE_PATH =
-            Environment.getDataDirectory().getAbsolutePath()
-                    + "/data/thanggun99.ailatrieuphu/databases";
+
+    @SuppressLint("SdCardPath")
+    private String DATABASE_PATH = android.os.Build.VERSION.SDK_INT >= 17 ?
+            (App.getContext().getApplicationInfo().dataDir + "/databases/")
+                    : ("/data/data/" + App.getContext().getPackageName() + "/databases/");
 
     private static final String SQL_GET_15_QUESTION = "select * from (select* from Question order by random()) group by level order by level limit 15";
 
@@ -37,10 +41,13 @@ public class DatabaseManager {
 
     private void copyDatabases() {
         try {
-            File file = new File(DATABASE_PATH + DATABASE_NAME);
+       /*     String filePath = DATABASE_PATH + DATABASE_NAME;
+            File file = new File(filePath);
             if (file.exists()) {
                 return;
             }
+
+            file.createNewFile();
             AssetManager asset = context.getAssets();
             DataInputStream in = new DataInputStream(asset.open(DATABASE_NAME));
             DataOutputStream out = new DataOutputStream(
@@ -51,7 +58,22 @@ public class DatabaseManager {
                 out.write(b, 0, length);
             }
             out.close();
-            in.close();
+            in.close();*/
+
+            InputStream mInput = context.getAssets().open(DATABASE_NAME);
+            String outFileName =  DATABASE_PATH + DATABASE_NAME;
+            new File(DATABASE_PATH).mkdirs();
+            OutputStream mOutput = new FileOutputStream(outFileName);
+            byte[] mBuffer = new byte[1024];
+            int mLength;
+            while ((mLength = mInput.read(mBuffer)) > 0) {
+                mOutput.write(mBuffer, 0, mLength);
+            }
+            mOutput.flush();
+            SharedPreferences prefs = PreferenceManager
+                    .getDefaultSharedPreferences(context);
+            mOutput.close();
+            mInput.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -90,7 +112,7 @@ public class DatabaseManager {
         cursor.moveToFirst();
         String name;
         int score;
-        while (cursor.isAfterLast() == false){
+        while (cursor.isAfterLast() == false) {
             name = cursor.getString(cursor.getColumnIndex("Name"));
             score = cursor.getInt(cursor.getColumnIndex("Score"));
 
