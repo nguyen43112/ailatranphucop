@@ -19,9 +19,7 @@ import java.util.Random;
 
 
 
-/**
- * Created by Thanggun99 on 30/10/2016.
- */
+
 
 public class AudienceDialog extends Dialog {
     private TextView present[];
