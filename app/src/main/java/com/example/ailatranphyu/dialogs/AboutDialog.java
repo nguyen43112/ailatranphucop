@@ -8,9 +8,7 @@ import android.widget.LinearLayout;
 import com.example.ailatranphyu.R;
 
 
-/**
- * Created by Thanggun99 on 02/11/2016.
- */
+
 
 public class AboutDialog extends Dialog {
     public AboutDialog(Context context) {
