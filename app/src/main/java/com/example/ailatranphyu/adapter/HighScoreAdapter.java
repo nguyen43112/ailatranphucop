@@ -14,9 +14,7 @@ import com.example.ailatranphyu.model.HighScore;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-/**
- * Created by Thanggun99 on 29/10/2016.
- */
+
 
 public class HighScoreAdapter extends BaseAdapter {
     private ArrayList<HighScore> highScores;
