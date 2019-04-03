@@ -6,9 +6,7 @@ import android.content.Context;
 import com.example.ailatranphyu.manager.MusicManager;
 
 
-/**
- * Created by Thanggun99 on 18/10/2016.
- */
+
 
 public class App extends Application {
     private static Context context;
