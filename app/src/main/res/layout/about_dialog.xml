@@ -21,25 +21,6 @@
         android:textStyle="bold"
         android:gravity="center"
         android:paddingTop="16dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:paddingLeft="32dp"
-        android:textColor="#8b8787"
-        android:text="Phiên bản: 1.0.0"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="32dp"
-        android:textColor="#8b8787"
-        android:text="Design: thanggun99"/>
-    <TextView
-        android:paddingBottom="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="32dp"
-        android:textColor="#8b8787"
-        android:text="Email: thanggun99@gmail.com"/>
+  
 
 </LinearLayout>
