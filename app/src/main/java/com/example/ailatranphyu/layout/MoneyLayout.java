@@ -12,9 +12,6 @@ import com.example.ailatranphyu.R;
 
 
 
-/**
- * Created by Thanggun99 on 20/10/2016.
- */
 
 public class MoneyLayout extends RelativeLayout {
     private TextView tvLevel[];
