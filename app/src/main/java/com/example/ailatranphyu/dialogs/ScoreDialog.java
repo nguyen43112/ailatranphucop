@@ -14,10 +14,6 @@ import com.example.ailatranphyu.R;
 import com.example.ailatranphyu.manager.DatabaseManager;
 
 
-/**
- * Created by Thanggun99 on 30/10/2016.
- */
-
 public class ScoreDialog extends Dialog implements View.OnClickListener {
     private int score;
     private EditText edtName;
