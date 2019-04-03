@@ -1,8 +1,6 @@
 package com.example.ailatranphyu.model;
 
-/**
- * Created by Thanggun99 on 29/10/2016.
- */
+
 public class HighScore {
     String name;
     int score;
