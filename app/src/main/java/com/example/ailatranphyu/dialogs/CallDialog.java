@@ -16,9 +16,6 @@ import com.example.ailatranphyu.App;
 import com.example.ailatranphyu.R;
 
 
-/**
- * Created by Thanggun99 on 27/10/2016.
- */
 
 public class CallDialog extends Dialog implements View.OnClickListener {
     private ImageButton btnHelpCall[];
