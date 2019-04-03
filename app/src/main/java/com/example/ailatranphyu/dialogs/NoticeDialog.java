@@ -13,10 +13,6 @@ import com.example.ailatranphyu.R;
 
 
 
-/**
- * Created by Thanggun99 on 20/10/2016.
- */
-
 public class NoticeDialog extends Dialog implements View.OnClickListener {
     private Button btnCancle;
     private Button btnOk;
