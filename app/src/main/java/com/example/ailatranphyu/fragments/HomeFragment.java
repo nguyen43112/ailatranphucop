@@ -18,7 +18,7 @@ import com.example.ailatranphyu.activity.HighScoreActivity;
 import com.example.ailatranphyu.activity.PlayerActivity;
 import com.example.ailatranphyu.activity.SettingsActivity;
 import com.example.ailatranphyu.dialogs.AboutDialog;
-
+//update
 
 /**
  * A simple {@link Fragment} subclass.
