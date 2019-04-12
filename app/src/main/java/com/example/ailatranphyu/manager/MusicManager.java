@@ -11,7 +11,7 @@ import com.example.ailatranphyu.R;
 import java.util.ArrayList;
 import java.util.Random;
 
-
+//update 12/4/2019
 
 public class MusicManager implements MediaPlayer.OnPreparedListener, MediaPlayer.OnCompletionListener {
 
