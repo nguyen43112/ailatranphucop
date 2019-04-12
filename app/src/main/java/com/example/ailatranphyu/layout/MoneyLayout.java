@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.example.ailatranphyu.R;
 
 
-
+//update 12/4/2019
 
 public class MoneyLayout extends RelativeLayout {
     private TextView tvLevel[];
