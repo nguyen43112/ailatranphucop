@@ -50,4 +50,4 @@ public class MainActivity extends AppCompatActivity {
         noticeDialog.show();
     }
 }
-.
+//update 12/4/2019
