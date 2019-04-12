@@ -98,3 +98,4 @@ public class SettingsActivity extends Activity implements View.OnClickListener {
 
 
 }
+//update 12/4/2019
