@@ -17,7 +17,7 @@ import com.example.ailatranphyu.R;
 import com.example.ailatranphyu.activity.HighScoreActivity;
 import com.example.ailatranphyu.activity.PlayerActivity;
 import com.example.ailatranphyu.activity.SettingsActivity;
-import com.example.ailatranphyu.dialogs.AboutDialog;
+
 //update
 
 /**
@@ -37,7 +37,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.btn_setting).setOnClickListener(this);
         view.findViewById(R.id.btn_play).setOnClickListener(this);
         view.findViewById(R.id.btn_high_score).setOnClickListener(this);
-        view.findViewById(R.id.btn_about).setOnClickListener(this);
+        
 
         return view;
 
@@ -80,10 +80,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             case R.id.btn_high_score:
                 Intent intent2 = new Intent(getContext(), HighScoreActivity.class);
                 startActivity(intent2);
-                break;
-            case R.id.btn_about:
-                AboutDialog aboutDialog = new AboutDialog(getContext());
-                aboutDialog.show();
                 break;
             default:
                 break;
