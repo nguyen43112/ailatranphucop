@@ -56,12 +56,6 @@
         android:layout_weight="2"
         android:gravity="center">
 
-        <ImageButton
-            android:id="@+id/btn_about"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="16dp"
-            android:background="@drawable/home_button_about" />
 
         <ImageButton
             android:id="@+id/btn_high_score"
